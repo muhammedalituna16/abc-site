@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xpify - Your AI Life Assistant</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Lato", sans-serif;
+        background-color: #fff;
+        color: #111;
+      }
+
+      .hero-section-app {
+        background: linear-gradient(
+            rgba(249, 215, 32, 0.9),
+            rgb(249 215 32 / 0%)
+          ),
+          url(images/background.png) no-repeat center center;
+        background-size: cover;
+        color: #111;
+      }
+
+      .feature-card:hover {
+        border-color: #f9d720;
+        background-color: #fff;
+        color: #111;
+      }
+
+      .gallery-item:hover img {
+        box-shadow: 0 10px 30px rgba(249, 215, 32, 0.3);
+      }
+
+      .store-button {
+        background-color: rgba(249, 215, 32, 0.1);
+        border: 1px solid rgba(249, 215, 32, 0.4);
+        transition: all 0.3s ease;
+      }
+      .store-button:hover {
+        background-color: rgba(249, 215, 32, 0.3);
+        transform: translateY(-3px);
+      }
+
+      .feature-card {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        color: #111;
+        transition: all 0.3s ease;
+      }
+
+      .gallery-item img {
+        border-radius: 30px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .gallery-item:hover img {
+        transform: scale(1.05);
+      }
+
+      .social-icon {
+        color: #111;
+        transition: all 0.3s ease;
+      }
+      .social-icon:hover {
+        color: #f9d720;
+        transform: translateY(-3px);
+      }
+
+      .xplogo-hover {
+        border-radius: 30px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .xplogo-hover:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 30px rgba(249, 215, 32, 0.3);
+      }
+    </style>
+  </head>
+  <body class="antialiased">
+    <!-- Header -->
+    <header
+      class="bg-white/80 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-200"
+    >
+      <nav
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <a href="index.html"> </a>
+        <a
+          href="index.html#games"
+          class="text-black hover:text-yellow-400 transition-colors"
+          >Other Projects</a
+        >
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero-section-app py-24 md:py-32 text-center">
+        <div class="container mx-auto px-6">
+          <h1 class="text-5xl md:text-7xl font-black uppercase tracking-wider">
+            Xpify
+          </h1>
+          <p class="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-black">
+            Your AI-powered Life Assistant. Organize. Track. Evolve.
+          </p>
+          <div
+            class="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center"
+          >
+            <a href="#" class="store-button w-48">
+              <img
+                src="images/playstore.png"
+                alt="Get it on Google Play"
+                class="w-full h-auto"
+              />
+            </a>
+            <a href="#" class="store-button w-48">
+              <img
+                src="images/appstore.png"
+                alt="Download on the App Store"
+                class="w-full h-auto"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- About the App -->
+      <section class="py-20 lg:py-24 bg-yellow-100">
+        <div class="container mx-auto px-6">
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center"
+          >
+            <div>
+              <img
+                src="images/xplogo.jpg"
+                alt="Xpify App Preview"
+                class="rounded-2xl shadow-2xl w-full xplogo-hover"
+                onerror="this.onerror=null;this.src='https://placehold.co/600x600/fff/111?text=Xpify';"
+              />
+            </div>
+            <div>
+              <h2 class="text-3xl md:text-4xl font-bold text-black mb-6">
+                About Xpify
+              </h2>
+              <p class="text-lg text-black leading-relaxed mb-4">
+                Xpify is your personal AI life assistant designed to help you
+                stay on track. Organize your tasks, track your habits, plan your
+                schedule, and build better routines — all in one intuitive app.
+              </p>
+              <p class="text-lg text-black leading-relaxed">
+                Whether you're chasing personal goals or striving for a
+                healthier lifestyle, Xpify keeps you motivated with AI-powered
+                suggestions and clear progress tracking.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Key Features -->
+      <section class="py-20 lg:py-24 bg-white">
+        <div class="container mx-auto px-6 text-center">
+          <h2 class="text-3xl md:text-4xl font-bold text-black mb-12">
+            Key Features
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="feature-card p-8 rounded-xl">
+              <h3 class="text-xl font-bold mb-2">
+                AI-powered diet and fitness
+              </h3>
+              <p>Personalized workouts and smart nutrition plans.</p>
+            </div>
+            <div class="feature-card p-8 rounded-xl">
+              <h3 class="text-xl font-bold mb-2">Habit Tracking</h3>
+              <p>
+                Build healthier habits with daily reminders and progress charts.
+              </p>
+            </div>
+            <div class="feature-card p-8 rounded-xl">
+              <h3 class="text-xl font-bold mb-2">Smart Planning</h3>
+              <p>Let AI suggest the best schedule based on your lifestyle.</p>
+            </div>
+            <div class="feature-card p-8 rounded-xl">
+              <h3 class="text-xl font-bold mb-2">Progress Insights</h3>
+              <p>Visualize your growth and track your achievements easily.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery -->
+      <section class="py-20 lg:py-24 bg-yellow-100">
+        <div class="container mx-auto px-6">
+          <h2
+            class="text-3xl md:text-4xl font-bold text-center text-black mb-12"
+          >
+            App Screens
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <a href="#" class="gallery-item block">
+              <img
+                loading="lazy"
+                src="images/xpify-screen1.jpg"
+                alt="Xpify Screenshot 1"
+                class="w-full max-w-xs mx-auto"
+              />
+            </a>
+            <a href="#" class="gallery-item block">
+              <img
+                loading="lazy"
+                src="images/xpify-screen2.jpg"
+                alt="Xpify Screenshot 2"
+                class="w-full max-w-xs mx-auto"
+              />
+            </a>
+            <a href="#" class="gallery-item block">
+              <img
+                loading="lazy"
+                src="images/xpify-screen3.jpg"
+                alt="Xpify Screenshot 3"
+                class="w-full max-w-xs mx-auto"
+              />
+            </a>
+            <a href="#" class="gallery-item block">
+              <img
+                loading="lazy"
+                src="images/xpify-screen4.jpg"
+                alt="Xpify Screenshot 4"
+                class="w-full max-w-xs mx-auto"
+              />
+            </a>
+            <a href="#" class="gallery-item block">
+              <img
+                loading="lazy"
+                src="images/xpify-screen5.jpg"
+                alt="Xpify Screenshot 5"
+                class="w-full max-w-xs mx-auto"
+              />
+            </a>
+            <a href="#" class="gallery-item block">
+              <img
+                loading="lazy"
+                src="images/xpify-screen6.jpg"
+                alt="Xpify Screenshot 6"
+                class="w-full max-w-xs mx-auto"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white py-12 border-t border-gray-200">
+      <div class="container mx-auto px-6 text-center text-black">
+        <div class="flex justify-center items-center space-x-6 mb-8">
+          <a
+            href="https://instagram.com/lorentalabs"
+            target="_blank"
+            class="social-icon"
+            aria-label="Instagram"
+          >
+            <svg
+              class="w-7 h-7"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+          <a
+            href="https://youtube.com/@lorentalabs"
+            target="_blank"
+            class="social-icon"
+            aria-label="YouTube"
+          >
+            <svg
+              class="w-7 h-7"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2A29 29 0 0 0 23 11.75a29 29 0 0 0-.46-5.33z"
+              ></path>
+              <polygon
+                points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"
+              ></polygon>
+            </svg>
+          </a>
+          <a
+            href="mailto:info@lorentalabs.com"
+            class="social-icon"
+            aria-label="Email"
+          >
+            <svg
+              class="w-7 h-7"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+              ></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </a>
+        </div>
+        <p class="text-sm">© 2025 Lorenta Labs. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

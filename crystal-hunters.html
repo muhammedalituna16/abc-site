@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crystal Hunters - Lorenta Labs</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Lato", sans-serif;
+        background-color: #111827;
+        color: #f3f4f6;
+      }
+
+      .hero-section-game {
+        background: linear-gradient(rgba(17, 24, 39, 0.9), rgba(17, 24, 39, 0%)),
+          url(images/background.png) no-repeat center center;
+        background-size: cover;
+        color: #f3f4f6;
+      }
+
+      .feature-card:hover {
+        border-color: #38bdf8;
+        background-color: #1f2937;
+        color: #f3f4f6;
+      }
+
+      .gallery-item img {
+        border-radius: 30px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .gallery-item:hover img {
+        transform: scale(1.05);
+        box-shadow: 0 10px 30px rgba(56, 189, 248, 0.3);
+      }
+
+      .store-button {
+        background-color: rgba(56, 189, 248, 0.1);
+        border: 1px solid rgba(56, 189, 248, 0.4);
+        transition: all 0.3s ease;
+      }
+      .store-button:hover {
+        background-color: rgba(56, 189, 248, 0.3);
+        transform: translateY(-3px);
+      }
+
+      .feature-card {
+        background-color: #1f2937;
+        border: 1px solid #374151;
+        color: #f3f4f6;
+        transition: all 0.3s ease;
+      }
+
+      .social-icon {
+        color: #9ca3af;
+        transition: all 0.3s ease;
+      }
+      .social-icon:hover {
+        color: #38bdf8;
+        transform: translateY(-3px);
+      }
+
+      .xplogo-hover {
+        border-radius: 30px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .xplogo-hover:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 30px rgba(56, 189, 248, 0.3);
+      }
+    </style>
+  </head>
+  <body class="antialiased">
+    <header
+      class="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-800"
+    >
+      <nav
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <a href="index.html"> </a>
+        <a
+          href="index.html#games"
+          class="text-gray-300 hover:text-sky-400 transition-colors"
+          >Other Games</a
+        >
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero-section-game py-24 md:py-32 text-center">
+        <div class="container mx-auto px-6">
+          <h1 class="text-5xl md:text-7xl font-black uppercase tracking-wider">
+            Crystal Hunters
+          </h1>
+          <p class="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-gray-300">
+            UNEARTH FORGOTTEN SECRETS IN ANCIENT LANDS!
+          </p>
+          <div
+            class="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center"
+          >
+            <a href="#" class="store-button w-48">
+              <img
+                src="images/playstore.png"
+                alt="Get it on Google Play"
+                class="w-full h-auto"
+              />
+            </a>
+            <a href="#" class="store-button w-48">
+              <img
+                src="images/appstore.png"
+                alt="Download on the App Store"
+                class="w-full h-auto"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-20 lg:py-24 bg-gray-900">
+        <div class="container mx-auto px-6">
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center"
+          >
+            <div>
+              <img
+                src="images/game2.png"
+                alt="Crystal Hunters Gameplay"
+                class="rounded-2xl shadow-2xl w-full xplogo-hover"
+                onerror="this.onerror=null;this.src='https://placehold.co/600x600/1f2937/f3f4f6?text=Crystal+Hunters';"
+              />
+            </div>
+            <div>
+              <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                About the Game
+              </h2>
+              <p class="text-lg text-gray-400 leading-relaxed mb-4">
+                Embark on a quest for ancient secrets in forgotten lands.
+                Crystal Hunters invites you to a world filled with mysterious
+                dungeons, dangerous monsters, and legendary treasures. Forge
+                your own path and become the greatest hunter in these lands.
+              </p>
+              <p class="text-lg text-gray-400 leading-relaxed">
+                Choose from characters with unique abilities, collect and
+                upgrade your gear. Embark on a solo epic adventure or form a
+                guild with friends to challenge the toughest foes. Your destiny
+                is yours to write.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-20 lg:py-24 bg-gray-800/50">
+        <div class="container mx-auto px-6 text-center">
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-12">
+            Key Features
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="feature-card p-8 rounded-xl">
+              <h3 class="text-xl font-bold mb-2">Vast World to Explore</h3>
+              <p class="text-gray-400">
+                Discover a huge map full of secrets and adventures.
+              </p>
+            </div>
+            <div class="feature-card p-8 rounded-xl">
+              <h3 class="text-xl font-bold mb-2">Strategic Combat</h3>
+              <p class="text-gray-400">
+                Combine different skills to gain an edge over your enemies.
+              </p>
+            </div>
+            <div class="feature-card p-8 rounded-xl">
+              <h3 class="text-xl font-bold mb-2">Legendary Gear</h3>
+              <p class="text-gray-400">
+                Collect and craft hundreds of different weapons, armors, and
+                magical items.
+              </p>
+            </div>
+            <div class="feature-card p-8 rounded-xl">
+              <h3 class="text-xl font-bold mb-2">Guild System</h3>
+              <p class="text-gray-400">
+                Join forces with your friends and defeat the most challenging
+                bosses.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-20 lg:py-24 bg-gray-900">
+        <div class="container mx-auto px-6">
+          <h2
+            class="text-3xl md:text-4xl font-bold text-center text-white mb-12"
+          >
+            In-Game Gallery
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <a href="#" class="gallery-item block"
+              ><img
+                loading="lazy"
+                src="https://placehold.co/600x400/1f2937/38BDF8?text=Ancient+Ruins"
+                alt="Crystal Hunters Screenshot 1"
+            /></a>
+            <a href="#" class="gallery-item block"
+              ><img
+                loading="lazy"
+                src="https://placehold.co/600x400/1f2937/38BDF8?text=Monster+Battle"
+                alt="Crystal Hunters Screenshot 2"
+            /></a>
+            <a href="#" class="gallery-item block"
+              ><img
+                loading="lazy"
+                src="https://placehold.co/600x400/1f2937/38BDF8?text=Character+Gear"
+                alt="Crystal Hunters Screenshot 3"
+            /></a>
+            <a href="#" class="gallery-item block sm:col-span-2 lg:col-span-1"
+              ><img
+                loading="lazy"
+                src="https://placehold.co/600x400/1f2937/38BDF8?text=Magic+Forest"
+                alt="Crystal Hunters Screenshot 4"
+            /></a>
+            <a href="#" class="gallery-item block"
+              ><img
+                loading="lazy"
+                src="https://placehold.co/600x400/1f2937/38BDF8?text=Dungeon+Crawl"
+                alt="Crystal Hunters Screenshot 5"
+            /></a>
+            <a href="#" class="gallery-item block"
+              ><img
+                loading="lazy"
+                src="https://placehold.co/600x400/1f2937/38BDF8?text=Town+Hub"
+                alt="Crystal Hunters Screenshot 6"
+            /></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-gray-900 py-12 border-t border-gray-800">
+      <div class="container mx-auto px-6 text-center text-gray-500">
+        <div class="flex justify-center items-center space-x-6 mb-8">
+          <a
+            href="https://instagram.com/lorentalabs"
+            target="_blank"
+            class="social-icon"
+            aria-label="Instagram"
+          >
+            <svg
+              class="w-7 h-7"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+          <a
+            href="https://youtube.com/@lorentalabs"
+            target="_blank"
+            class="social-icon"
+            aria-label="YouTube"
+          >
+            <svg
+              class="w-7 h-7"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2A29 29 0 0 0 23 11.75a29 29 0 0 0-.46-5.33z"
+              ></path>
+              <polygon
+                points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"
+              ></polygon>
+            </svg>
+          </a>
+        </div>
+        <p class="text-sm">© 2025 Lorenta Labs. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

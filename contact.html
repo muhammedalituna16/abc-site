@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Lorenta Labs</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        font-family: "Lato", sans-serif;
+        background-color: #000000;
+        color: #f3f4f6;
+      }
+
+      .hero-section-contact {
+        background-image: url("images/youtube_cover.png");
+        background-size: cover;
+        background-position: center;
+      }
+
+      .bottom-image {
+        width: 575px;
+        position: fixed;
+        bottom: -63px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 20;
+      }
+    </style>
+  </head>
+  <body class="antialiased">
+    <header class="absolute top-0 left-0 w-full z-20">
+      <div
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <a href="index.html" class="flex items-center"> </a>
+
+        <a
+          href="index.html"
+          class="text-gray-200 font-semibold hover:text-white transition-colors"
+          >Back to Home</a
+        >
+      </div>
+    </header>
+
+    <section
+      class="relative h-96 flex items-center justify-center text-center hero-section-contact"
+    >
+      <div class="absolute inset-0 bg-black opacity-60"></div>
+      <div class="relative z-10 px-4">
+        <h1
+          class="text-5xl md:text-7xl font-black text-white"
+          style="
+            font-family: 'Times New Roman', Times, serif;
+            letter-spacing: 0.1em;
+          "
+        >
+          info@lorentalabs.com
+        </h1>
+      </div>
+    </section>
+
+    <!-- Alt sabit karakter -->
+    <img
+      src="images/ali.png"
+      alt="Ali's Avatar"
+      class="bottom-image"
+      onerror="this.onerror=null;this.src='https://placehold.co/600x600/1f2937/ffffff?text=ALI';"
+    />
+  </body>
+</html>

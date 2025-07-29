@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Light Bloom - Lorenta Labs</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Fredoka", sans-serif;
+        background-color: #e6f2e3;
+        color: #1e3a1f;
+      }
+
+      .hero-section-app {
+        background: linear-gradient(rgba(45, 90, 56, 0.8), rgba(45, 90, 56, 0.6)),
+          url(images/background.png) no-repeat center center;
+        background-size: cover;
+        color: #fffce8;
+      }
+
+      .feature-card {
+        background-color: #ffffff;
+        border: 2px solid #aad576;
+        color: #2d5a38;
+        transition: all 0.3s ease;
+      }
+
+      .feature-card:hover {
+        border-color: #f9d94a;
+        background-color: #fff9e0;
+      }
+
+      .gallery-item img {
+        border-radius: 24px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .gallery-item:hover img {
+        transform: scale(1.05);
+        box-shadow: 0 10px 30px rgba(124, 79, 39, 0.25);
+      }
+
+      .social-icon {
+        color: #2d5a38;
+        transition: all 0.3s ease;
+      }
+
+      .social-icon:hover {
+        color: #f9d94a;
+        transform: translateY(-3px);
+      }
+    </style>
+  </head>
+  <body class="antialiased">
+    <header class="bg-[#f6fce6]/90 backdrop-blur-sm sticky top-0 z-50 border-b border-[#d9eac7]">
+      <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="index.html"></a>
+        <a href="index.html#games" class="text-[#2d5a38] hover:text-yellow-500 transition-colors">
+          Other Projects
+        </a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero-section-app py-24 md:py-32 text-center">
+        <div class="container mx-auto px-6">
+          <h1 class="text-5xl md:text-7xl font-black uppercase tracking-wider text-[#fff4d0]">
+            Light Bloom
+          </h1>
+          <p class="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-[#fff4d0]">
+            Reflect. Grow. Solve. A tranquil puzzle game where sunlight meets life.
+          </p>
+        </div>
+      </section>
+
+      <section class="py-20 lg:py-24 bg-[#f0fbe7]">
+        <div class="container mx-auto px-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div>
+              <img
+                src="images/light-bloom.png"
+                alt="Light Bloom Preview"
+                class="rounded-2xl shadow-2xl w-full"
+                onerror="this.onerror=null;this.src='https://placehold.co/600x600/fff/111?text=Light+Bloom';"
+              />
+            </div>
+            <div>
+              <h2 class="text-3xl md:text-4xl font-bold text-[#2d5a38] mb-6">About Light Bloom</h2>
+              <p class="text-lg text-[#3b4e3f] leading-relaxed mb-4">
+                Light Bloom is a cheerful and calming puzzle adventure. Use fixed mirrors to guide sunlight across lush forest boards and awaken cute plants.
+              </p>
+              <p class="text-lg text-[#3b4e3f] leading-relaxed">
+                With every correct reflection, you’ll bring a new flower to life. Watch it bloom in vibrant animations and move on to more intricate levels.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-20 lg:py-24 bg-white">
+        <div class="container mx-auto px-6 text-center">
+          <h2 class="text-3xl md:text-4xl font-bold text-[#2d5a38] mb-12">Key Mechanics</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="feature-card p-8 rounded-xl">
+              <h3 class="text-xl font-bold mb-2">Sunlight Source</h3>
+              <p>Every level starts with a fixed light beam you must redirect to the target plant.</p>
+            </div>
+            <div class="feature-card p-8 rounded-xl">
+              <h3 class="text-xl font-bold mb-2">Fixed Mirrors</h3>
+              <p>Strategically place angled mirrors (45°, -45°) to bounce the beam through the grid.</p>
+            </div>
+            <div class="feature-card p-8 rounded-xl">
+              <h3 class="text-xl font-bold mb-2">Grid & Progression</h3>
+              <p>Play through expanding grids, unlock new tiles, and animate the plant’s growth.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-20 lg:py-24 bg-[#f0fbe7]">
+        <div class="container mx-auto px-6">
+          <h2 class="text-3xl md:text-4xl font-bold text-center text-[#2d5a38] mb-12">
+            Game Screens
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <a href="#" class="gallery-item block">
+              <img loading="lazy" src="images/lightbloom-mockup-1.png" alt="Light Bloom Screenshot 1" />
+            </a>
+            <a href="#" class="gallery-item block">
+              <img loading="lazy" src="images/lightbloom-mockup-2.png" alt="Light Bloom Screenshot 2" />
+            </a>
+            <a href="#" class="gallery-item block">
+              <img loading="lazy" src="images/lightbloom-mockup-3.png" alt="Light Bloom Screenshot 3" />
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-[#f6fce6] py-12 border-t border-[#d9eac7]">
+      <div class="container mx-auto px-6 text-center text-[#2d5a38]">
+        <div class="flex justify-center items-center space-x-6 mb-8">
+          <a href="https://instagram.com/lorentalabs" target="_blank" class="social-icon" aria-label="Instagram">
+            <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+          <a href="https://youtube.com/@lorentalabs" target="_blank" class="social-icon" aria-label="YouTube">
+            <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2A29 29 0 0 0 23 11.75a29 29 0 0 0-.46-5.33z"></path>
+              <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+            </svg>
+          </a>
+          <a href="mailto:info@lorentalabs.com" class="social-icon" aria-label="Email">
+            <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </a>
+        </div>
+        <p class="text-sm">© 2025 Lorenta Labs. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
