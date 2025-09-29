@@ -41,14 +41,17 @@
         box-shadow: 0 10px 30px rgba(249, 215, 32, 0.3);
       }
 
-      .store-button {
-        background-color: rgba(249, 215, 32, 0.1);
-        border: 1px solid rgba(249, 215, 32, 0.4);
-        transition: all 0.3s ease;
+      .store-button{
+        background-color: transparent;
+        border: 0;
+        padding: 0;
+        display: inline-block;
+        border-radius: 0; /* istersen koruyabilirsin */
+        transition: none;
       }
-      .store-button:hover {
-        background-color: rgba(249, 215, 32, 0.3);
-        transform: translateY(-3px);
+      .store-button:hover{
+        background-color: transparent;
+        transform: none;
       }
 
       .feature-card {
@@ -87,19 +90,24 @@
     </style>
   </head>
   <body class="antialiased">
-    <!-- Header -->
-    <header
-      class="bg-white/80 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-200"
-    >
-      <nav
-        class="container mx-auto px-6 py-4 flex justify-between items-center"
-      >
-        <a href="index.html"> </a>
-        <a
-          href="index.html#games"
-          class="text-black hover:text-yellow-400 transition-colors"
-          >Other Projects</a
-        >
+
+
+
+  <!-- HEADER -->
+    <header class="bg-white sticky top-0 z-50 h-20 flex items-center">
+      <nav class="w-full px-10 flex justify-between items-center">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center space-x-2">
+          <img src="images/ali.png" 
+              alt="Light Bloom Logo" 
+              class="h-[5rem] w-auto rounded-2xl" />
+        </a>
+
+        <!-- Menu Links -->
+        <div class="flex space-x-12">
+          <a href="index.html#games" class="text-black text-lg font-extrabold uppercase tracking-wide hover:text-[#585858] transition-colors">Projects</a>
+          <a href="contact.html" class="text-black text-lg font-extrabold uppercase tracking-wide hover:text-[#585858] transition-colors">Contact</a>
+        </div>
       </nav>
     </header>
 
@@ -210,7 +218,7 @@
             <a href="#" class="gallery-item block">
               <img
                 loading="lazy"
-                src="images/xpify-screen1.jpg"
+                src="images/xpify_images/xpify-screen1.jpg"
                 alt="Xpify Screenshot 1"
                 class="w-full max-w-xs mx-auto"
               />
@@ -218,7 +226,7 @@
             <a href="#" class="gallery-item block">
               <img
                 loading="lazy"
-                src="images/xpify-screen2.jpg"
+                src="images/xpify_images/xpify-screen2.jpg"
                 alt="Xpify Screenshot 2"
                 class="w-full max-w-xs mx-auto"
               />
@@ -226,7 +234,7 @@
             <a href="#" class="gallery-item block">
               <img
                 loading="lazy"
-                src="images/xpify-screen3.jpg"
+                src="images/xpify_images/xpify-screen3.jpg"
                 alt="Xpify Screenshot 3"
                 class="w-full max-w-xs mx-auto"
               />
@@ -234,7 +242,7 @@
             <a href="#" class="gallery-item block">
               <img
                 loading="lazy"
-                src="images/xpify-screen4.jpg"
+                src="images/xpify_images/xpify-screen4.jpg"
                 alt="Xpify Screenshot 4"
                 class="w-full max-w-xs mx-auto"
               />
@@ -242,7 +250,7 @@
             <a href="#" class="gallery-item block">
               <img
                 loading="lazy"
-                src="images/xpify-screen5.jpg"
+                src="images/xpify_images/xpify-screen5.jpg"
                 alt="Xpify Screenshot 5"
                 class="w-full max-w-xs mx-auto"
               />
@@ -250,7 +258,7 @@
             <a href="#" class="gallery-item block">
               <img
                 loading="lazy"
-                src="images/xpify-screen6.jpg"
+                src="images/xpify_images/xpify-screen6.jpg"
                 alt="Xpify Screenshot 6"
                 class="w-full max-w-xs mx-auto"
               />

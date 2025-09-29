@@ -9,163 +9,566 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- MAIN FONT: Lato (match Xpify page) -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
       rel="stylesheet"
     />
 
     <style>
+      /* === Global (match Xpify) === */
       body {
-        font-family: "Fredoka", sans-serif;
-        background-color: #e6f2e3;
-        color: #1e3a1f;
+        font-family: "Lato", sans-serif;
+        background-color: #fff;
+        color: #111;
       }
 
+      /* === Hero (match Xpify) === */
       .hero-section-app {
-        background: linear-gradient(rgba(45, 90, 56, 0.8), rgba(45, 90, 56, 0.6)),
-          url(images/background.png) no-repeat center center;
+        background: url(images/lightbloom_images/lightbloombg.png) no-repeat center center;
         background-size: cover;
-        color: #fffce8;
+        color: #111;
       }
 
+      /* === Feature Cards (match Xpify) === */
       .feature-card {
-        background-color: #ffffff;
-        border: 2px solid #aad576;
-        color: #2d5a38;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        color: #111;
         transition: all 0.3s ease;
       }
-
       .feature-card:hover {
-        border-color: #f9d94a;
-        background-color: #fff9e0;
+        border-color: #f9d720;
+        background-color: #fff;
+        color: #111;
       }
 
+      /* === Gallery (match Xpify) === */
       .gallery-item img {
-        border-radius: 24px;
+        border-radius: 30px;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
       }
-
       .gallery-item:hover img {
         transform: scale(1.05);
-        box-shadow: 0 10px 30px rgba(124, 79, 39, 0.25);
+        box-shadow: 0 10px 30px rgba(249, 215, 32, 0.3);
       }
 
+      /* === Social Icons (match Xpify) === */
       .social-icon {
-        color: #2d5a38;
+        color: #111;
         transition: all 0.3s ease;
       }
-
       .social-icon:hover {
-        color: #f9d94a;
+        color: #f9d720;
         transform: translateY(-3px);
+      }
+
+      /* === Store Buttons (match Xpify) === */
+      .store-button{
+        background-color: transparent;
+        border: 0;
+        padding: 0;
+        display: inline-block;
+        border-radius: 0; /* istersen koruyabilirsin */
+        transition: none;
+      }
+      .store-button:hover{
+        background-color: transparent;
+        transform: none;
+      }
+
+      /* === Image hover util from Xpify === */
+      .xplogo-hover {
+        border-radius: 30px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .xplogo-hover:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 30px rgba(249, 215, 32, 0.3);
       }
     </style>
   </head>
   <body class="antialiased">
-    <header class="bg-[#f6fce6]/90 backdrop-blur-sm sticky top-0 z-50 border-b border-[#d9eac7]">
-      <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="index.html"></a>
-        <a href="index.html#games" class="text-[#2d5a38] hover:text-yellow-500 transition-colors">
-          Other Projects
+
+
+  <!-- HEADER -->
+    <header class="bg-white sticky top-0 z-50 h-20 flex items-center">
+      <nav class="w-full px-10 flex justify-between items-center">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center space-x-2">
+          <img src="images/ali.png" 
+              alt="Light Bloom Logo" 
+              class="h-[5rem] w-auto rounded-2xl" />
         </a>
+
+        <!-- Menu Links -->
+        <div class="flex space-x-12">
+          <a href="index.html#games" class="text-black text-lg font-extrabold uppercase tracking-wide hover:text-[#585858] transition-colors">Projects</a>
+          <a href="contact.html" class="text-black text-lg font-extrabold uppercase tracking-wide hover:text-[#585858] transition-colors">Contact</a>
+        </div>
       </nav>
     </header>
 
-    <main>
-      <section class="hero-section-app py-24 md:py-32 text-center">
-        <div class="container mx-auto px-6">
-          <h1 class="text-5xl md:text-7xl font-black uppercase tracking-wider text-[#fff4d0]">
-            Light Bloom
-          </h1>
-          <p class="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-[#fff4d0]">
-            Reflect. Grow. Solve. A tranquil puzzle game where sunlight meets life.
-          </p>
-        </div>
-      </section>
 
-      <section class="py-20 lg:py-24 bg-[#f0fbe7]">
-        <div class="container mx-auto px-6">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <div>
+
+
+
+    <main>
+      <!-- HERO (add store buttons to match Xpify) -->
+      <section class="hero-section-app py-72 md:py-70 text-center">
+
+     </section>
+
+
+
+    <!-- ABOUT -->
+    <section class="py-20 lg:py-24 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <!-- LEFT: Game visual (logo/preview) -->
+          <div>
+            <img
+              src="images/light-bloom.png"
+              alt="Light Bloom Preview"
+              class="rounded-2xl shadow-2xl w-full xplogo-hover"
+              onerror="this.onerror=null;this.src='https://placehold.co/600x600/fff/111?text=Light+Bloom';"
+            />
+          </div>
+
+          <!-- RIGHT: Name logo, tagline, store buttons -->
+          <div class="text-center">
+            <!-- Name Logo -->
+            <div class="flex justify-center">
               <img
-                src="images/light-bloom.png"
-                alt="Light Bloom Preview"
-                class="rounded-2xl shadow-2xl w-full"
-                onerror="this.onerror=null;this.src='https://placehold.co/600x600/fff/111?text=Light+Bloom';"
+                src="images/lightbloom_images/namelogo.png"
+                alt="Light Bloom Name Logo"
+                class="w-64 md:w-80 mx-auto"
               />
             </div>
-            <div>
-              <h2 class="text-3xl md:text-4xl font-bold text-[#2d5a38] mb-6">About Light Bloom</h2>
-              <p class="text-lg text-[#3b4e3f] leading-relaxed mb-4">
-                Light Bloom is a cheerful and calming puzzle adventure. Use fixed mirrors to guide sunlight across lush forest boards and awaken cute plants.
-              </p>
-              <p class="text-lg text-[#3b4e3f] leading-relaxed">
-                With every correct reflection, you’ll bring a new flower to life. Watch it bloom in vibrant animations and move on to more intricate levels.
-              </p>
+
+            <!-- Tagline -->
+            <p class="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-black text-center">
+              Guide the light through mirrors and make the plants bloom!
+            </p>
+
+            <!-- Store buttons (side by side) -->
+            <div class="mt-8 flex flex-row flex-wrap gap-4 justify-center items-center">
+              <a href="#" class="store-button w-48">
+                <img
+                  src="images/playstore.png"
+                  alt="Get it on Google Play"
+                  class="w-full h-auto"
+                />
+              </a>
+              <a href="#" class="store-button w-48">
+                <img
+                  src="images/appstore.png"
+                  alt="Download on the App Store"
+                  class="w-full h-auto"
+                />
+              </a>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="py-20 lg:py-24 bg-white">
-        <div class="container mx-auto px-6 text-center">
-          <h2 class="text-3xl md:text-4xl font-bold text-[#2d5a38] mb-12">Key Mechanics</h2>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="feature-card p-8 rounded-xl">
-              <h3 class="text-xl font-bold mb-2">Sunlight Source</h3>
-              <p>Every level starts with a fixed light beam you must redirect to the target plant.</p>
-            </div>
-            <div class="feature-card p-8 rounded-xl">
-              <h3 class="text-xl font-bold mb-2">Fixed Mirrors</h3>
-              <p>Strategically place angled mirrors (45°, -45°) to bounce the beam through the grid.</p>
-            </div>
-            <div class="feature-card p-8 rounded-xl">
-              <h3 class="text-xl font-bold mb-2">Grid & Progression</h3>
-              <p>Play through expanding grids, unlock new tiles, and animate the plant’s growth.</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <section class="py-20 lg:py-24 bg-[#f0fbe7]">
+
+      <!-- GALLERY -->
+      <section class="py-20 lg:py-24 bg-[#FFD200]">
         <div class="container mx-auto px-6">
-          <h2 class="text-3xl md:text-4xl font-bold text-center text-[#2d5a38] mb-12">
-            Game Screens
-          </h2>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <a href="#" class="gallery-item block">
-              <img loading="lazy" src="images/lightbloom-mockup-1.png" alt="Light Bloom Screenshot 1" />
+              <img
+                loading="lazy"
+                src="images/lightbloom_images/lightbloom-mockup-1.png"
+                alt="Light Bloom Screenshot 1"
+                class="w-full max-w-xs mx-auto"
+              />
             </a>
             <a href="#" class="gallery-item block">
-              <img loading="lazy" src="images/lightbloom-mockup-2.png" alt="Light Bloom Screenshot 2" />
+              <img
+                loading="lazy"
+                src="images/lightbloom_images/lightbloom-mockup-2.png"
+                alt="Light Bloom Screenshot 2"
+                class="w-full max-w-xs mx-auto"
+              />
             </a>
             <a href="#" class="gallery-item block">
-              <img loading="lazy" src="images/lightbloom-mockup-3.png" alt="Light Bloom Screenshot 3" />
+              <img
+                loading="lazy"
+                src="images/lightbloom_images/lightbloom-mockup-3.png"
+                alt="Light Bloom Screenshot 3"
+                class="w-full max-w-xs mx-auto"
+              />
+            </a>
+
+            <a href="#" class="gallery-item block">
+              <img
+                loading="lazy"
+                src="images/lightbloom_images/lightbloom-mockup-4.png"
+                alt="Light Bloom Screenshot 4"
+                class="w-full max-w-xs mx-auto"
+              />
+            </a>
+            <a href="#" class="gallery-item block">
+              <img
+                loading="lazy"
+                src="images/lightbloom_images/lightbloom-mockup-5.png"
+                alt="Light Bloom Screenshot 5"
+                class="w-full max-w-xs mx-auto"
+              />
             </a>
           </div>
         </div>
       </section>
+
+
+
+      <!-- Objects (Background with Title Only) -->
+    <section 
+      class="relative h-[540px] bg-cover bg-center"
+      style="background-image: url('images/lightbloom_images/objects.png');"
+    >
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-black/40"></div>
+
+      <!-- Title -->
+      <div class="relative z-10 flex items-center justify-center h-full">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-white uppercase tracking-wide">
+          OBJECTS
+        </h2>
+      </div>
+    </section>
+
+      
+<!-- MECHANICS -->
+<section class="py-20 lg:py-24 bg-white">
+  <div class="container mx-auto px-6 text-center">
+    <!-- 2-column layout so items can sit side-by-side as requested -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 text-left">
+
+      <!-- Row 1: Light Source + Seed -->
+      <!-- Light Source -->
+      <div class="feature-card p-8 rounded-xl text-center">
+        <h3 class="text-xl font-bold mb-4">Light Source</h3>
+        <img
+          src="images/lightbloom_images/LightSource.png"
+          alt="Light Source icon"
+          class="w-32 h-32 object-contain mb-4 mx-auto rounded-xl"
+          onerror="this.onerror=null;this.src='https://placehold.co/200x200/fff/111?text=Light+Source';"
+        />
+        <p class="text-base leading-relaxed">
+          <span class="font-bold">The sun emits light from a fixed position.</span>
+        </p>
+      </div>
+
+      <!-- Seed -->
+      <div class="feature-card p-8 rounded-xl text-center">
+        <h3 class="text-xl font-bold mb-4">Seed</h3>
+        <img
+          src="images/lightbloom_images/seed.png"
+          alt="Seed icon"
+          class="w-32 h-32 object-contain mb-4 mx-auto rounded-xl"
+          onerror="this.onerror=null;this.src='https://placehold.co/200x200/fff/111?text=Seed';"
+        />
+        <p class="text-base leading-relaxed">
+          <span class="font-bold">The plant that awaits the light to come to life.</span>
+        </p>
+      </div>
+
+      <!-- Row 2: Game Board + Obstacle -->
+      <!-- Game Board -->
+      <div class="feature-card p-8 rounded-xl text-center">
+        <h3 class="text-xl font-bold mb-4">Game Board</h3>
+        <img
+          src="images/lightbloom_images/GameBoard.png"
+          alt="Game Board icon"
+          class="w-32 h-32 object-contain mb-4 mx-auto rounded-xl"
+          onerror="this.onerror=null;this.src='https://placehold.co/200x200/fff/111?text=Game+Board';"
+        />
+        <p class="text-base leading-relaxed">
+          <span class="font-bold">Played on a grid.</span>
+        </p>
+      </div>
+
+      <!-- 🚫 Obstacle -->
+      <div class="feature-card p-8 rounded-xl text-center">
+        <h3 class="text-xl font-bold mb-4">Obstacle</h3>
+        <img
+          src="images/lightbloom_images/obstacle.png"
+          alt="Obstacle tile"
+          class="w-32 h-32 object-contain mb-4 mx-auto rounded-xl"
+          onerror="this.onerror=null;this.src='https://placehold.co/200x200/fff/111?text=Obstacle';"
+        />
+        <p class="text-base leading-relaxed">
+          Engel: Işık geçemez ve bu kareye ayna koyamazsın.
+        </p>
+      </div>
+
+      <!-- Row 3: Mirror (A) + Mirror (B) -->
+      <!-- 🪞 Mirror (A) – 45° -->
+      <div class="feature-card p-8 rounded-xl text-center">
+        <h3 class="text-xl font-bold mb-4">Mirror (A) — 45°</h3>
+        <img
+          src="images/lightbloom_images/mirror-a.png"
+          alt="Mirror A (45°) icon"
+          class="w-32 h-32 object-contain mb-4 mx-auto rounded-xl"
+          onerror="this.onerror=null;this.src='https://placehold.co/200x200/fff/111?text=Mirror+A';"
+        />
+        <p class="text-base leading-relaxed">
+          Fixed angle at <span class="font-bold">45°</span>. Cannot be rotated; can be moved to other grid squares.
+        </p>
+      </div>
+
+      <!-- 🪞 Mirror (B) – -45° -->
+      <div class="feature-card p-8 rounded-xl text-center">
+        <h3 class="text-xl font-bold mb-4">Mirror (B) — -45°</h3>
+        <img
+          src="images/lightbloom_images/mirror-b.png"
+          alt="Mirror B (-45°) icon"
+          class="w-32 h-32 object-contain mb-4 mx-auto rounded-xl"
+          onerror="this.onerror=null;this.src='https://placehold.co/200x200/fff/111?text=Mirror+B';"
+        />
+        <p class="text-base leading-relaxed">
+          Fixed angle at <span class="font-bold">-45°</span>. Cannot be rotated; can be moved to other grid squares.
+        </p>
+      </div>
+
+      <!-- Row 4: Static Mirror (A) + Static Mirror (B) -->
+      <!-- 🧱 Static Mirror (A) -->
+      <div class="feature-card p-8 rounded-xl text-center">
+        <h3 class="text-xl font-bold mb-4">Static Mirror (A)</h3>
+        <img
+          src="images/lightbloom_images/static-mirror-a.png"
+          alt="Static Mirror A icon"
+          class="w-32 h-32 object-contain mb-4 mx-auto rounded-xl"
+          onerror="this.onerror=null;this.src='https://placehold.co/200x200/fff/111?text=Static+A';"
+        />
+        <p class="text-base leading-relaxed">
+          <span class="font-bold">Fixed and not movable.</span> Angle is predetermined and locked.
+        </p>
+      </div>
+
+      <!-- 🧱 Static Mirror (B) -->
+      <div class="feature-card p-8 rounded-xl text-center">
+        <h3 class="text-xl font-bold mb-4">Static Mirror (B)</h3>
+        <img
+          src="images/lightbloom_images/static-mirror-b.png"
+          alt="Static Mirror B icon"
+          class="w-32 h-32 object-contain mb-4 mx-auto rounded-xl"
+          onerror="this.onerror=null;this.src='https://placehold.co/200x200/fff/111?text=Static+B';"
+        />
+        <p class="text-base leading-relaxed">
+          <span class="font-bold">Fixed and not movable.</span> Angle is predetermined and locked.
+        </p>
+      </div>
+
+      <!-- Row 6: Hammer + Flipper -->
+      <!-- 🔨 Hammer -->
+      <div class="feature-card p-8 rounded-xl text-center">
+        <h3 class="text-xl font-bold mb-4">Hammer</h3>
+        <img
+          src="images/lightbloom_images/hammer.png"
+          alt="Hammer power-up icon"
+          class="w-32 h-32 object-contain mb-4 mx-auto rounded-xl"
+          onerror="this.onerror=null;this.src='https://placehold.co/200x200/fff/111?text=Hammer';"
+        />
+        <p class="text-base leading-relaxed">
+          Tap an obstacle to smash it.
+        </p>
+      </div>
+
+      <!-- 🔁 Flipper -->
+      <div class="feature-card p-8 rounded-xl text-center">
+        <h3 class="text-xl font-bold mb-4">Flipper</h3>
+        <img
+          src="images/lightbloom_images/flipper.png"
+          alt="Flipper power-up icon"
+          class="w-32 h-32 object-contain mb-4 mx-auto rounded-xl"
+          onerror="this.onerror=null;this.src='https://placehold.co/200x200/fff/111?text=Flipper';"
+        />
+        <p class="text-base leading-relaxed">
+          Tap a mirror to flip its type.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- CHARACTER HERO (Background with Title Only) -->
+<section 
+  class="relative h-[540px] bg-cover bg-center"
+  style="background-image: url('images/lightbloom_images/masa.png');"
+>
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black/40"></div>
+
+  <!-- Title -->
+  <div class="relative z-10 flex items-center justify-center h-full">
+    <h2 class="text-4xl md:text-5xl font-extrabold text-white uppercase tracking-wide">
+      CHARACTERS
+    </h2>
+  </div>
+</section>
+
+<!-- CHARACTERS LIST -->
+<section class="relative py-20 bg-[#FFD200]">
+  <div class="container mx-auto px-6 space-y-32">
+
+    <!-- Character 1 (Vegas) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <img src="images/lightbloom_images/char1.png" alt="Vegas – The Hero" class="rounded-2xl shadow-2xl">
+      <div class="text-black">
+        <h3 class="text-3xl font-bold mb-4">VEGAS</h3>
+        <p class="text-lg">
+          THE HERO: A curious red panda with endless courage! Vegas guides the light through every challenge and brings life
+          to the plants. Without him, the journey cannot begin.
+        </p>
+      </div>
+    </div>
+
+    <!-- Character 2 (Lumo) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div class="text-black md:order-1 order-2">
+        <h3 class="text-3xl font-bold mb-4">LUMO</h3>
+        <p class="text-lg">
+          THE TECH GENIUS: A clever fox with glowing blue energy! With his smart visor and sharp mind, Lumo finds the perfect angles
+          to solve even the hardest puzzles.
+        </p>
+      </div>
+      <img src="images/lightbloom_images/char2.png" alt="Lumo – The Tech Genius" class="rounded-2xl shadow-2xl md:order-2 order-1">
+    </div>
+
+    <!-- Character 3 (Iris) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <img src="images/lightbloom_images/char3.png" alt="Iris – The Visionary" class="rounded-2xl shadow-2xl">
+      <div class="text-black">
+        <h3 class="text-3xl font-bold mb-4">IRIS</h3>
+        <p class="text-lg">
+          THE VISIONARY: A wise owl with a calm spirit! Iris always sees the bigger picture, guiding the team through darkness with
+          knowledge and foresight.
+        </p>
+      </div>
+    </div>
+
+    <!-- Character 4 (Blaze) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div class="text-black md:order-1 order-2">
+        <h3 class="text-3xl font-bold mb-4">BLAZE</h3>
+        <p class="text-lg">
+          THE BRAVE: A fearless tiger with fiery determination! Blaze leaps into danger without hesitation and inspires the team
+          with his strength and speed.
+        </p>
+      </div>
+      <img src="images/lightbloom_images/char4.png" alt="Blaze – The Brave" class="rounded-2xl shadow-2xl md:order-2 order-1">
+    </div>
+
+    <!-- Character 5 (Terra) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <img src="images/lightbloom_images/char5.png" alt="Terra – The Protector" class="rounded-2xl shadow-2xl">
+      <div class="text-black">
+        <h3 class="text-3xl font-bold mb-4">TERRA</h3>
+        <p class="text-lg">
+          THE PROTECTOR: A gentle but strong guardian of nature! Terra defends the roots of life, clearing the path and keeping the
+          team safe through every obstacle.
+        </p>
+      </div>
+    </div>
+
+    <!-- Character 6 (Pixel) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div class="text-black md:order-1 order-2">
+        <h3 class="text-3xl font-bold mb-4">PIXEL</h3>
+        <p class="text-lg">
+          THE ADVENTURER: A cheerful robot with a glowing screen face! Pixel brings energy and humor to the journey, turning every
+          error into a new opportunity.
+        </p>
+      </div>
+      <img src="images/lightbloom_images/char6.png" alt="Pixel – The Adventurer" class="rounded-2xl shadow-2xl md:order-2 order-1">
+    </div>
+
+  </div>
+</section>
+
+
     </main>
 
-    <footer class="bg-[#f6fce6] py-12 border-t border-[#d9eac7]">
-      <div class="container mx-auto px-6 text-center text-[#2d5a38]">
+    <!-- FOOTER (match Xpify) -->
+    <footer class="bg-white py-12 border-t border-gray-200">
+      <div class="container mx-auto px-6 text-center text-black">
         <div class="flex justify-center items-center space-x-6 mb-8">
-          <a href="https://instagram.com/lorentalabs" target="_blank" class="social-icon" aria-label="Instagram">
-            <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <a
+            href="https://instagram.com/lorentalabs"
+            target="_blank"
+            class="social-icon"
+            aria-label="Instagram"
+          >
+            <svg
+              class="w-7 h-7"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
               <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <path
+                d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+              ></path>
               <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
             </svg>
           </a>
-          <a href="https://youtube.com/@lorentalabs" target="_blank" class="social-icon" aria-label="YouTube">
-            <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2A29 29 0 0 0 23 11.75a29 29 0 0 0-.46-5.33z"></path>
-              <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+          <a
+            href="https://youtube.com/@lorentalabs"
+            target="_blank"
+            class="social-icon"
+            aria-label="YouTube"
+          >
+            <svg
+              class="w-7 h-7"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2A29 29 0 0 0 23 11.75a29 29 0 0 0-.46-5.33z"
+              ></path>
+              <polygon
+                points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"
+              ></polygon>
             </svg>
           </a>
           <a href="mailto:info@lorentalabs.com" class="social-icon" aria-label="Email">
-            <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <svg
+              class="w-7 h-7"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+              ></path>
               <polyline points="22,6 12,13 2,6"></polyline>
             </svg>
           </a>

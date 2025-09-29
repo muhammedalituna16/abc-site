@@ -21,12 +21,6 @@
         color: #f3f4f6;
       }
 
-      .hero-section-game {
-        background: linear-gradient(rgba(17, 24, 39, 0.9), rgba(17, 24, 39, 0%)),
-          url(images/background.png) no-repeat center center;
-        background-size: cover;
-        color: #f3f4f6;
-      }
 
       .feature-card:hover {
         border-color: #a855f7;
@@ -43,15 +37,20 @@
         box-shadow: 0 10px 30px rgba(168, 85, 247, 0.3);
       }
 
-      .store-button {
-        background-color: rgba(168, 85, 247, 0.1);
-        border: 1px solid rgba(168, 85, 247, 0.4);
-        transition: all 0.3s ease;
-      }
-      .store-button:hover {
-        background-color: rgba(168, 85, 247, 0.3);
-        transform: translateY(-3px);
-      }
+    /* sade: dış çerçeveyi ve hover efektini kaldır */
+    .store-button{
+      background-color: transparent;
+      border: 0;
+      padding: 0;
+      display: inline-block;
+      border-radius: 0; /* istersen koruyabilirsin */
+      transition: none;
+    }
+    .store-button:hover{
+      background-color: transparent;
+      transform: none;
+    }
+
 
       .feature-card {
         background-color: #1f2937;
@@ -81,18 +80,23 @@
     </style>
   </head>
   <body class="antialiased">
-    <header
-      class="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-800"
-    >
-      <nav
-        class="container mx-auto px-6 py-4 flex justify-between items-center"
-      >
-        <a href="index.html"> </a>
-        <a
-          href="index.html#games"
-          class="text-gray-300 hover:text-purple-400 transition-colors"
-          >Other Games</a
-        >
+
+
+  <!-- HEADER -->
+    <header class="bg-white sticky top-0 z-50 h-20 flex items-center">
+      <nav class="w-full px-10 flex justify-between items-center">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center space-x-2">
+          <img src="images/ali.png" 
+              alt="Light Bloom Logo" 
+              class="h-[5rem] w-auto rounded-2xl" />
+        </a>
+
+        <!-- Menu Links -->
+        <div class="flex space-x-12">
+          <a href="index.html#games" class="text-black text-lg font-extrabold uppercase tracking-wide hover:text-[#585858] transition-colors">Projects</a>
+          <a href="contact.html" class="text-black text-lg font-extrabold uppercase tracking-wide hover:text-[#585858] transition-colors">Contact</a>
+        </div>
       </nav>
     </header>
 
