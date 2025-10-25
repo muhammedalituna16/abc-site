@@ -24,7 +24,7 @@
       }
 
       .hero-section-istanbul {
-        background-image: url("images/background.png");
+        background-image: url("images/background1.jpg");
         background-size: cover;
         background-position: center;
       }
@@ -122,6 +122,63 @@
         transform: translateY(-3px);
       }
 
+      /* ===== SPLASH SCREEN STYLES ===== */
+      #splash-screen {
+        position: fixed; /* Stays in one place */
+        top: 0;
+        left: 0;
+        width: 100vw; /* 100% of viewport width */
+        height: 100vh; /* 100% of viewport height */
+        background-color: #000000; /* Your site's black background */
+        display: flex;
+        flex-direction: column; /* YENİ: Öğeleri dikeyde hizalamak için */
+        align-items: center;
+        justify-content: center;
+        z-index: 9999; /* Ensures it's on top of all other content */
+        opacity: 1;
+        transition: opacity 0.75s ease-out; /* Smooth fade-out */
+      }
+
+      /* This class will be added by JavaScript to hide the screen */
+      #splash-screen.hidden {
+        opacity: 0;
+        pointer-events: none; /* Allows clicks to go through after it's hidden */
+      }
+
+      /* YENİ: Logonuz için stiller */
+      .splash-logo {
+        /* height ve width kaldırıldı, çünkü 'div'in içindeki resim (h-60 w-auto) boyutu belirliyor */
+        display: inline-block; /* 'div'in genişliğinin resme uymasını sağlar */
+        
+        /* Opsiyonel: Yüklendiğini göstermek için "nefes alma" animasyonu */
+        animation: splash-pulse 2s ease-in-out infinite;
+      }
+      
+      /* YENİ: Logo animasyonu için keyframe'ler */
+      @keyframes splash-pulse {
+        0% {
+          transform: scale(1);
+          opacity: 0.9;
+        }
+        50% {
+          transform: scale(1.03); /* Hafifçe büyür */
+          opacity: 1;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 0.9;
+        }
+      }
+      /* ===== END SPLASH SCREEN STYLES ===== */
+
+      /* The animation for the spinner */
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      /* ===== END SPLASH SCREEN STYLES ===== */
+
       /* Animations */
       @keyframes subtleFadeUp {
         from {
@@ -182,6 +239,17 @@
     </style>
   </head>
   <body class="antialiased">
+
+
+    <div id="splash-screen">
+      
+      <div class="border-b border-gray-800 splash-logo px-12"> 
+        <img src="images/ali.png" alt="Lorenta Labs Yükleniyor..." class="h-60 w-auto">
+      </div>
+
+    </div>
+
+
     <section
       class="relative h-screen flex items-center justify-center text-center p-4 hero-section-istanbul"
     >
@@ -293,40 +361,6 @@
           </p>
         </div>
       </a>
-
-      <!-- Lorenta Media -->
-      <a
-        href="lorenta-media.html"
-        class="game-entry fade-in group transition duration-300 hover:scale-105 hover:shadow-[0_0_30px_#00C6A2] rounded-xl"
-        title="Lorenta Media Details"
-      >
-        <div class="game-visuals md:order-1">
-          <img
-            loading="lazy"
-            src="images/lorenta-media.png"
-            alt="Lorenta Media"
-            class="w-full"
-          />
-        </div>
-        <div class="game-details text-center md:text-left md:order-2 px-6">
-          <div
-            class="social-proof text-sm font-bold px-4 py-2 rounded-lg inline-block mb-6"
-            style="background-color: rgba(0, 198, 162, 0.1); color: #00C6A2; border: 1px solid rgba(0, 198, 162, 0.3);"
-          >
-            +10,000 Curious Minds Reached
-          </div>
-          <h3 class="text-4xl lg:text-5xl font-black mb-4 transition-colors duration-300 group-hover:text-[#00C6A2]">
-            Lorenta Media
-          </h3>
-          <p class="text-lg leading-relaxed text-[#00C6A2]">
-            Smart content for smarter people.<br />
-            We decode science, tech, and news — fast, clear, and fun.
-          </p>
-        </div>
-      </a>
-
-
-      
 
       <!-- Crystal Hunters -->
       <a
@@ -498,7 +532,7 @@
   </a>
 
   <a
-    href="https://www.linkedin.com/in/lorenta-labs-8b0a10371"
+    href="https://www.linkedin.com/company/lorenta-labs"
     target="_blank"
     rel="noopener noreferrer"
     class="social-icon"
@@ -579,7 +613,7 @@
 
 
 
-<script>
+    <script>
       document.addEventListener('DOMContentLoaded', () => {
         const els = document.querySelectorAll('.fade-in');
         const io = new IntersectionObserver((entries) => {
@@ -590,6 +624,18 @@
 
         els.forEach(el => io.observe(el));
       });
+    </script>
+
+    <script>
+      // Wait until the entire page (images, fonts, etc.) is fully loaded
+      window.onload = function() {
+        const splashScreen = document.getElementById('splash-screen');
+        
+        // Add a small delay for a smoother feel, then fade out
+        setTimeout(() => {
+          splashScreen.classList.add('hidden');
+        }, 500); // 500ms = 0.5 second delay
+      };
     </script>
 
 
