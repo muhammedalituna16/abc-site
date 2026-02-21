@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cosmos - AI-Powered Fortune Telling</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../images/favicon/safari-pinned-tab.svg" color="#B76E79">
+    <link rel="shortcut icon" href="../images/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#050510">
+    <meta name="msapplication-config" content="../images/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#050510">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Lora:ital@1&family=Montserrat:wght@700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Lato", sans-serif;
+        background-color: #050510;
+        color: #E0E0E0;
+      }
+
+      .hero-section-app {
+        background: linear-gradient(
+            rgba(183, 110, 121, 0.2),
+            rgba(5, 5, 16, 1)
+          ),
+          url(../images/background.png) no-repeat center center;
+        background-size: cover;
+        color: #FFFFFF;
+      }
+
+      .feature-card:hover {
+        border-color: #00FFFF;
+        background-color: rgba(255, 255, 255, 0.05);
+        color: #FFFFFF;
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+      }
+
+      .gallery-item:hover img {
+        box-shadow: 0 10px 30px rgba(183, 110, 121, 0.3);
+      }
+
+      .store-button {
+        background-color: transparent;
+        border: 0;
+        padding: 0;
+        display: inline-block;
+        border-radius: 0;
+        transition: transform 0.3s ease;
+      }
+      .store-button:hover {
+        transform: scale(1.05);
+      }
+
+      .feature-card {
+        background-color: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(183, 110, 121, 0.2);
+        color: #E0E0E0;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(10px);
+      }
+
+      .gallery-item img {
+        border-radius: 30px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .gallery-item:hover img {
+        transform: scale(1.05);
+      }
+
+      .social-icon {
+        color: #E0E0E0;
+        transition: all 0.3s ease;
+      }
+      .social-icon:hover {
+        color: #B76E79;
+        transform: translateY(-3px);
+      }
+
+      .cosmoslogo-hover {
+        border-radius: 30px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .cosmoslogo-hover:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 30px rgba(183, 110, 121, 0.3);
+      }
+
+      h1, h2, .montserrat { font-family: 'Montserrat', sans-serif; }
+      .lora { font-family: 'Lora', serif; }
+    </style>
+  </head>
+  <body class="antialiased">
+
+  <header class="bg-[#050510]/90 backdrop-blur-md sticky top-0 z-50 h-20 flex items-center border-b border-white/5">
+      <nav class="w-full px-10 flex justify-between items-center">
+        <a href="../index.html" class="flex items-center space-x-2">
+          <img src="../images/img/ali.png" 
+              alt="Logo" 
+              class="h-[5rem] w-auto rounded-2xl" />
+        </a>
+
+        <div class="flex space-x-12">
+          <a href="../index.html#games" class="text-white text-lg font-extrabold uppercase tracking-wide hover:text-[#B76E79] transition-colors">Projects</a>
+          <a href="../legal/contact.html" class="text-white text-lg font-extrabold uppercase tracking-wide hover:text-[#B76E79] transition-colors">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero-section-app py-24 md:py-32 text-center">
+        <div class="container mx-auto px-6">
+          <h1 class="text-5xl md:text-7xl font-black uppercase tracking-wider text-[#B76E79]">
+            Cosmos
+          </h1>
+          <p class="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-white/80 lora">
+            The future isn't guessed. It's calculated.
+          </p>
+          <div
+            class="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center"
+          >
+            <a href="#" class="store-button w-48">
+              <img
+                src="../images/playstore.png"
+                alt="Get it on Google Play"
+                class="w-full h-auto"
+              />
+            </a>
+            <a href="#" class="store-button w-48">
+              <img
+                src="../images/appstore.png"
+                alt="Download on the App Store"
+                class="w-full h-auto"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-20 lg:py-24 bg-[#0a0a1a]">
+        <div class="container mx-auto px-6">
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center"
+          >
+            <div>
+              <img
+                src="../images/cosmos_images/cosmos.png"
+                alt="Cosmos App Preview"
+                class="rounded-2xl shadow-2xl w-full cosmoslogo-hover"
+                onerror="this.onerror=null;this.src='https://placehold.co/600x600/050510/B76E79?text=Cosmos';"
+              />
+            </div>
+            <div>
+              <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                About Cosmos
+              </h2>
+              <p class="text-lg text-white/70 leading-relaxed mb-4 lora">
+                Cosmos is your spiritual companion designed to interpret the unseen. 
+                Using advanced machine learning, it provides personalized coffee readings, 
+                tarot insights, and astrological forecasts instantly.
+              </p>
+              <p class="text-lg text-white/70 leading-relaxed lora">
+                Unlock the mysteries of your future and receive daily spiritual guidance 
+                tailored to your unique cosmic energy.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-20 lg:py-24 bg-[#050510]">
+        <div class="container mx-auto px-6 text-center">
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-12">
+            Key Features
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="feature-card p-8 rounded-xl">
+              <h3 class="text-xl font-bold mb-2 text-[#B76E79]">
+                AI Coffee Reading
+              </h3>
+              <p class="text-sm text-white/60">Snap a photo and let AI analyze the symbols in your cup.</p>
+            </div>
+            <div class="feature-card p-8 rounded-xl">
+              <h3 class="text-xl font-bold mb-2 text-[#B76E79]">Tarot Insights</h3>
+              <p class="text-sm text-white/60">
+                Deep interpretations of tarot cards powered by modern algorithms.
+              </p>
+            </div>
+            <div class="feature-card p-8 rounded-xl">
+              <h3 class="text-xl font-bold mb-2 text-[#B76E79]">Daily Horoscopes</h3>
+              <p class="text-sm text-white/60">Personalized astrological forecasts based on the stars.</p>
+            </div>
+            <div class="feature-card p-8 rounded-xl">
+              <h3 class="text-xl font-bold mb-2 text-[#B76E79]">Spiritual Guidance</h3>
+              <p class="text-sm text-white/60">Talk to your AI mystic for 24/7 clarity and advice.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-20 lg:py-24 bg-[#0a0a1a]">
+        <div class="container mx-auto px-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <a href="#" class="gallery-item block">
+              <img
+                loading="lazy"
+                src="../images/cosmos_images/cosmos-screen1.png"
+                alt="Cosmos Screenshot 1"
+                class="w-full max-w-xs mx-auto"
+              />
+            </a>
+            <a href="#" class="gallery-item block">
+              <img
+                loading="lazy"
+                src="../images/cosmos_images/cosmos-screen2.png"
+                alt="Cosmos Screenshot 2"
+                class="w-full max-w-xs mx-auto"
+              />
+            </a>
+            <a href="#" class="gallery-item block">
+              <img
+                loading="lazy"
+                src="../images/cosmos_images/cosmos-screen3.png"
+                alt="Cosmos Screenshot 3"
+                class="w-full max-w-xs mx-auto"
+              />
+            </a>
+            <a href="#" class="gallery-item block">
+              <img
+                loading="lazy"
+                src="../images/cosmos_images/cosmos-screen4.png"
+                alt="Cosmos Screenshot 4"
+                class="w-full max-w-xs mx-auto"
+              />
+            </a>
+            <a href="#" class="gallery-item block">
+              <img
+                loading="lazy"
+                src="../images/cosmos_images/cosmos-screen5.png"
+                alt="Cosmos Screenshot 5"
+                class="w-full max-w-xs mx-auto"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="bg-black text-gray-400 border-t border-white/5">
+      <div class="container mx-auto px-6 py-16">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 text-center md:text-left">
+          <div class="flex flex-col items-center md:items-start">
+            <img
+              src="../images/img/ali.png"
+              alt="Lorenta Labs Logo"
+              class="h-60 w-auto"
+              onerror="this.onerror=null;this.src='https://placehold.co/120x40/000000/ffffff?text=LORENTA';"
+            />
+          </div>
+
+          <div class="w-full self-start flex justify-center items-start space-x-5">
+            <a href="https://instagram.com/lorentalabs" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+
+            <a href="https://www.linkedin.com/company/lorenta-labs" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn" title="LinkedIn">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM0 8h5v16H0zM7 8h4.8v2.2h.1c.7-1.2 2.4-2.5 4.9-2.5 5.2 0 6.1 3.4 6.1 7.8V24h-5V16c0-1.9 0-4.4-2.7-4.4-2.7 0-3.1 2.1-3.1 4.2V24H7z" />
+              </svg>
+            </a>
+
+            <a href="https://youtube.com/@lorentalabs" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="YouTube">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2A29 29 0 0 0 23 11.75a29 29 0 0 0-.46-5.33z"></path>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+              </svg>
+            </a>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-white uppercase tracking-wider text-sm mb-4">Legal</h4>
+            <nav class="flex flex-col space-y-3">
+              <a href="../legal/terms.html" class="hover:text-[#B76E79] transition-colors">Terms</a>
+              <a href="../legal/privacy.html" class="hover:text-[#B76E79] transition-colors">Privacy</a>
+            </nav>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-white uppercase tracking-wider text-sm mb-4">Get In Touch</h4>
+            <a href="../legal/contact.html" class="hover:text-[#B76E79] transition-colors">info@lorentalabs.com</a>
+          </div>
+        </div>
+
+        <div class="mt-0 pt-8 border-t border-white/5 text-center text-sm">
+          <p>© 2026 Lorenta Labs</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

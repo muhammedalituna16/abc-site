@@ -27,12 +27,12 @@
     <style>
       body {
         font-family: "Lato", sans-serif;
-        background-color: #000000; /* Black */
-        color: #f3f4f6; /* Light Gray */
+        background-color: #000000;
+        color: #f3f4f6;
       }
 
       .hero-section-istanbul {
-        background-image: url("images/background1.jpg");
+        background-image: url("images/img/background1.jpg");
         background-size: cover;
         background-position: center;
       }
@@ -50,8 +50,8 @@
         font-family: "Luckiest Guy", cursive;
         text-shadow: 0px 3px 15px rgba(0, 0, 0, 0.7);
         line-height: 1.2;
-        cursor: pointer; /* Add cursor pointer for the easter egg */
-        transition: color 0.3s ease; /* Smooth color transition */
+        cursor: pointer;
+        transition: color 0.3s ease;
         transform: translateY(-75%);
       }
 
@@ -66,8 +66,8 @@
         grid-template-columns: 1fr;
         align-items: center;
         gap: 2rem;
-        text-decoration: none; /* Remove link underline */
-        color: inherit; /* Reset link color */
+        text-decoration: none;
+        color: inherit;
       }
 
       @media (min-width: 768px) {
@@ -130,137 +130,61 @@
         transform: translateY(-3px);
       }
 
-      /* ===== SPLASH SCREEN STYLES ===== */
       #splash-screen {
-        position: fixed; /* Stays in one place */
+        position: fixed;
         top: 0;
         left: 0;
-        width: 100vw; /* 100% of viewport width */
-        height: 100vh; /* 100% of viewport height */
-        background-color: #000000; /* Your site's black background */
+        width: 100vw;
+        height: 100vh;
+        background-color: #000000;
         display: flex;
-        flex-direction: column; /* YENİ: Öğeleri dikeyde hizalamak için */
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        z-index: 9999; /* Ensures it's on top of all other content */
+        z-index: 9999;
         opacity: 1;
-        transition: opacity 0.75s ease-out; /* Smooth fade-out */
+        transition: opacity 0.75s ease-out;
       }
 
-      /* This class will be added by JavaScript to hide the screen */
       #splash-screen.hidden {
         opacity: 0;
-        pointer-events: none; /* Allows clicks to go through after it's hidden */
+        pointer-events: none;
       }
 
-      /* YENİ: Logonuz için stiller */
       .splash-logo {
-        /* height ve width kaldırıldı, çünkü 'div'in içindeki resim (h-60 w-auto) boyutu belirliyor */
-        display: inline-block; /* 'div'in genişliğinin resme uymasını sağlar */
-        
-        /* Opsiyonel: Yüklendiğini göstermek için "nefes alma" animasyonu */
+        display: inline-block;
         animation: splash-pulse 2s ease-in-out infinite;
       }
       
-      /* YENİ: Logo animasyonu için keyframe'ler */
       @keyframes splash-pulse {
-        0% {
-          transform: scale(1);
-          opacity: 0.9;
-        }
-        50% {
-          transform: scale(1.03); /* Hafifçe büyür */
-          opacity: 1;
-        }
-        100% {
-          transform: scale(1);
-          opacity: 0.9;
-        }
+        0% { transform: scale(1); opacity: 0.9; }
+        50% { transform: scale(1.03); opacity: 1; }
+        100% { transform: scale(1); opacity: 0.9; }
       }
-      /* ===== END SPLASH SCREEN STYLES ===== */
 
-      /* The animation for the spinner */
-      @keyframes spin {
-        to {
-          transform: rotate(360deg);
-        }
-      }
-      /* ===== END SPLASH SCREEN STYLES ===== */
-
-      /* Animations */
       @keyframes subtleFadeUp {
-        from {
-          opacity: 0;
-          transform: translateY(40px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
+        from { opacity: 0; transform: translateY(40px); }
+        to { opacity: 1; transform: translateY(0); }
       }
       @keyframes scroll-anim {
-        0% {
-          transform: translateY(-3px);
-        }
-        50% {
-          transform: translateY(3px);
-        }
-        100% {
-          transform: translateY(-3px);
-        }
-      }
-      /* NEW: Shake animation for the easter egg */
-      @keyframes shake {
-        10%,
-        90% {
-          transform: translate3d(-1px, 0, 0);
-        }
-        20%,
-        80% {
-          transform: translate3d(2px, 0, 0);
-        }
-        30%,
-        50%,
-        70% {
-          transform: translate3d(-4px, 0, 0);
-        }
-        40%,
-        60% {
-          transform: translate3d(4px, 0, 0);
-        }
-      }
-      .shake-effect {
-        animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+        0% { transform: translateY(-3px); }
+        50% { transform: translateY(3px); }
+        100% { transform: translateY(-3px); }
       }
 
-      .scroll-indicator-inner {
-        animation: scroll-anim 1.5s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-      }
-      .fade-in {
-        opacity: 0;
-      }
-      .fade-in.visible {
-        animation: subtleFadeUp 0.8s ease-out forwards;
-      }
-
-      
+      .fade-in { opacity: 0; }
+      .fade-in.visible { animation: subtleFadeUp 0.8s ease-out forwards; }
     </style>
   </head>
   <body class="antialiased">
 
-
     <div id="splash-screen">
-      
       <div class="border-b border-gray-800 splash-logo px-12"> 
-        <img src="images/ali.png" alt="Lorenta Labs Yükleniyor..." class="h-60 w-auto">
+        <img src="images/img/ali.png" alt="Lorenta Labs Loading..." class="h-60 w-auto">
       </div>
-
     </div>
 
-
-    <section
-      class="relative h-screen flex items-center justify-center text-center p-4 hero-section-istanbul"
-    >
+    <section class="relative h-screen flex items-center justify-center text-center p-4 hero-section-istanbul">
       <div class="absolute inset-0 hero-overlay"></div>
       <div class="relative z-10">
           <h1 class="text-7xl md:text-9xl text-white uppercase hero-title-serif">
@@ -270,356 +194,138 @@
       </div>
     </section>
 
-    <section
-      id="philosophy"
-      class="relative py-40 lg:py-52 bg-black"
-      style="
-        background-image: url('images/background.jpg');
-        background-size: cover;
-        background-position: center;
-      "
-    >
+    <section id="philosophy" class="relative py-40 lg:py-52 bg-black" style="background-image: url('images/img/background.jpg'); background-size: cover; background-position: center;">
       <div class="absolute inset-0 bg-black bg-opacity-70"></div>
-
       <div class="relative z-10 px-6 text-center">
-        <h2 class="text-5xl md:text-7xl font-bold text-white mb-6 fade-in">
-          Dream. Build. Disrupt.
-        </h2>
-        <p
-          class="text-lg md:text-xl text-gray-400 leading-relaxed max-w-4xl mx-auto fade-in"
-          style="animation-delay: 200ms"
-        >
-          From immersive games to cutting-edge software — we turn ideas into
-          bold digital experiences.
+        <h2 class="text-5xl md:text-7xl font-bold text-white mb-6 fade-in">Dream. Build. Disrupt.</h2>
+        <p class="text-lg md:text-xl text-gray-400 leading-relaxed max-w-4xl mx-auto fade-in" style="animation-delay: 200ms">
+          From immersive games to cutting-edge software — we turn ideas into bold digital experiences.
         </p>
       </div>
     </section>
 
-    <section
-      id="games"
-      class="py-20 lg:py-32 bg-black border-t border-gray-800"
-    >
+    <section id="games" class="py-20 lg:py-32 bg-black border-t border-gray-800">
       <div class="container mx-auto px-6">
-        <h2 class="text-4xl md:text-5xl font-bold text-center mb-20 fade-in">
-          Our Adventures
-        </h2>
+        <h2 class="text-4xl md:text-5xl font-bold text-center mb-20 fade-in">Our Adventures</h2>
 
-    <div class="game-showcase">
+        <div class="game-showcase">
+          <a href="projects/?app=cosmos" class="game-entry fade-in group transition duration-300 hover:scale-105 hover:shadow-[0_0_30px_#B76E79] rounded-xl" title="Cosmos App Details">
+            <div class="game-visuals md:order-1">
+              <img loading="lazy" src="images/cosmos_images/cosmos.png" alt="Cosmos App" class="w-full" onerror="this.onerror=null;this.src='https://placehold.co/600x600/050510/B76E79?text=Cosmos';">
+            </div>
+            <div class="game-details text-center md:text-left md:order-2 px-6">
+              <div class="social-proof text-sm font-bold px-4 py-2 rounded-lg inline-block mb-6" style="background-color: rgba(183, 110, 121, 0.1); color: #B76E79; border-color: rgba(183, 110, 121, 0.3);">New Release</div>
+              <h3 class="text-4xl lg:text-5xl font-black mb-4 transition-colors duration-300 group-hover:text-[#B76E79]">Cosmos</h3>
+              <p class="text-lg leading-relaxed text-[#B76E79]">Fortune Teller. Unlock the mysteries of your future with personalized coffee readings, tarot insights, and cosmic guidance.</p>
+            </div>
+          </a>
 
-        <!-- Light Bloom -->
-      <a
-        href="light-bloom.html"
-        class="game-entry fade-in group transition duration-300 hover:scale-105 hover:shadow-[0_0_30px_#FFD200] rounded-xl"
-        title="Light Bloom Game Details"
-      >
-        <div class="game-visuals md:order-1">
-          <img
-            loading="lazy"
-            src="images/light-bloom.png"
-            alt="Light Bloom Game"
-            class="w-full"
-            onerror="this.onerror=null;this.src='https://placehold.co/600x600/2D5A38/FFF4D0?text=Light+Bloom';"
-          />
+          <a href="projects/?app=light-bloom" class="game-entry fade-in group transition duration-300 hover:scale-105 hover:shadow-[0_0_30px_#FFD200] rounded-xl" title="Light Bloom Game Details">
+            <div class="game-visuals md:order-1">
+              <img loading="lazy" src="images/lightbloom_images/light-bloom.png" alt="Light Bloom Game" class="w-full" onerror="this.onerror=null;this.src='https://placehold.co/600x600/2D5A38/FFF4D0?text=Light+Bloom';">
+            </div>
+            <div class="game-details text-center md:text-left md:order-2 px-6">
+              <div class="social-proof text-sm font-bold px-4 py-2 rounded-lg inline-block mb-6" style="background-color: rgba(255, 210, 0, 0.1); color: #FFD200; border-color: rgba(255, 210, 0, 0.3);">Play Now</div>
+              <h3 class="text-4xl lg:text-5xl font-black mb-4 transition-colors duration-300 group-hover:text-[#FFD200] lightbloom-title">Light Bloom</h3>
+              <p class="text-lg leading-relaxed">A puzzle game where sunlight meets strategy. Place fixed-angle mirrors to guide the beam and awaken the sleeping flower.</p>
+            </div>
+          </a>
+
+          <a href="projects/?app=xpify" class="game-entry fade-in group transition duration-300 hover:scale-105 hover:shadow-[0_0_30px_#F9D720] rounded-xl" title="Xpify App Details">
+            <div class="game-visuals md:order-1">
+              <img loading="lazy" src="images/xpify_images/xplogo.jpg" alt="Xpify App" class="w-full" onerror="this.onerror=null;this.src='https://placehold.co/600x600/1f2937/f3f4f6?text=Xpify';">
+            </div>
+            <div class="game-details text-center md:text-left md:order-2 px-6">
+              <div class="social-proof text-sm font-bold px-4 py-2 rounded-lg inline-block mb-6" style="background-color: rgba(249, 215, 32, 0.1); color: #f9d720; border-color: rgba(249, 215, 32, 0.3);">+1,000 Premium Users</div>
+              <h3 class="text-4xl lg:text-5xl font-black mb-4 transition-colors duration-300 group-hover:text-[#F9D720]">Xpify</h3>
+              <p class="text-lg leading-relaxed text-[#F9D720]">Your AI-powered life assistant. Organize your day, track your habits, set goals, and level up your real life with Xpify.</p>
+            </div>
+          </a>
+
+          <a href="projects/?app=crystal-hunters" class="game-entry fade-in group transition duration-300 hover:scale-105 hover:shadow-[0_0_30px_#38BDF8] rounded-xl" title="Crystal Hunters Details">
+            <div class="game-visuals md:order-1">
+              <img loading="lazy" src="images/crystalhunters_images/crystal-hunters.png" alt="Crystal Hunters Game" class="w-full" onerror="this.onerror=null;this.src='https://placehold.co/600x600/1f2937/f3f4f6?text=Crystal+Hunters';">
+            </div>
+            <div class="game-details text-center md:text-left md:order-2 px-6">
+              <div class="social-proof text-sm font-bold px-4 py-2 rounded-lg inline-block mb-6" style="background-color: rgba(14, 165, 233, 0.1); color: #38bdf8; border-color: rgba(14, 165, 233, 0.3);">Coming Soon</div>
+              <h3 class="text-4xl lg:text-5xl font-black mb-4 transition-colors duration-300 group-hover:text-sky-400">Crystal Hunters</h3>
+              <p class="text-lg leading-relaxed text-[#38BDF8]">Uncover ancient secrets in forgotten lands. Collect legendary gear, battle formidable foes, and write your own epic.</p>
+            </div>
+          </a>
+
+          <a href="projects/?app=neon-racer" class="game-entry fade-in group transition duration-300 hover:scale-105 hover:shadow-[0_0_30px_#A855F7] rounded-xl" title="Neon Racer Details">
+            <div class="game-visuals md:order-1">
+              <img loading="lazy" src="images/neonracer_images/neon-racer.png" alt="Neon Racer Game" class="w-full" onerror="this.onerror=null;this.src='https://placehold.co/600x600/1f2937/f3f4f6?text=Neon+Racer';">
+            </div>
+            <div class="game-details text-center md:text-left md:order-2 px-6">
+              <div class="social-proof text-sm font-bold px-4 py-2 rounded-lg inline-block mb-6" style="background-color: rgba(168, 85, 247, 0.1); color: #a855f7; border-color: rgba(168, 85, 247, 0.3);">Coming Soon</div>
+              <h3 class="text-4xl lg:text-5xl font-black mb-4 transition-colors duration-300 group-hover:text-[#A855F7]">Neon Racer</h3>
+              <p class="text-lg leading-relaxed text-[#A855F7]">In this race where 80s nostalgia meets cyberpunk aesthetics, test your reflexes and race to the top of the leaderboard!</p>
+            </div>
+          </a>
+
+          <a href="projects/?app=sky-frontier" class="game-entry fade-in group transition duration-300 hover:scale-105 hover:shadow-[0_0_30px_#2563EB] rounded-xl" title="Sky Frontier Game Details">
+            <div class="game-visuals md:order-1">
+              <img loading="lazy" src="images/skyfrontier_images/sky-frontier.png" alt="Sky Frontier Game" class="w-full" onerror="this.onerror=null;this.src='https://placehold.co/600x600/0F172A/E0F2FE?text=Sky+Frontier';">
+            </div>
+            <div class="game-details text-center md:text-left md:order-2 px-6">
+              <div class="social-proof text-sm font-bold px-4 py-2 rounded-lg inline-block mb-6" style="background-color: rgba(37, 99, 235, 0.1); color: #2563EB; border-color: rgba(37, 99, 235, 0.3);">Coming Soon</div>
+              <h3 class="text-4xl lg:text-5xl font-black mb-4 transition-colors duration-300 group-hover:text-blue-400">Sky Frontier</h3>
+              <p class="text-lg leading-relaxed text-blue-100">Build your airship empire among the clouds. Explore floating islands, battle aerial foes, and forge your skyfaring legacy.</p>
+            </div>
+          </a>
         </div>
-        <div class="game-details text-center md:text-left md:order-2 px-6">
-          <div
-            class="social-proof text-sm font-bold px-4 py-2 rounded-lg inline-block mb-6"
-            style="background-color: rgba(255, 210, 0, 0.1); color: #FFD200; border-color: rgba(255, 210, 0, 0.3);"
-          >
-            Play Now
-          </div>
-          <h3 class="text-4xl lg:text-5xl font-black mb-4 transition-colors duration-300 group-hover:text-[#FFD200] lightbloom-title">
-            Light Bloom
-          </h3>
-          <p class="text-lg leading-relaxed">
-            A puzzle game where sunlight meets strategy. Place fixed-angle mirrors to guide the beam and awaken the sleeping flower. As light touches life, watch the seed blossom into beauty.
-          </p>
-        </div>
-      </a>
-
-
-
-      <!-- Xpify -->
-      <a
-        href="xpify.html"
-        class="game-entry fade-in group transition duration-300 hover:scale-105 hover:shadow-[0_0_30px_#F9D720] rounded-xl"
-        title="Xpify App Details"
-      >
-        <div class="game-visuals md:order-1">
-          <img
-            loading="lazy"
-            src="images/xplogo.jpg"
-            alt="Xpify App"
-            class="w-full"
-            onerror="this.onerror=null;this.src='https://placehold.co/600x600/1f2937/f3f4f6?text=Xpify';"
-          />
-        </div>
-        <div class="game-details text-center md:text-left md:order-2 px-6">
-          <div
-            class="social-proof text-sm font-bold px-4 py-2 rounded-lg inline-block mb-6"
-            style="background-color: rgba(249, 215, 32, 0.1); color: #f9d720; border-color: rgba(249, 215, 32, 0.3);"
-          >
-            +1,000 Premium Users
-          </div>
-          <h3 class="text-4xl lg:text-5xl font-black mb-4 transition-colors duration-300 group-hover:text-[#F9D720]">
-            Xpify
-          </h3>
-          <p class="text-lg leading-relaxed text-[#F9D720]">
-            Your AI-powered life assistant. Organize your day, track your habits, set goals, and level up your real life with Xpify.
-          </p>
-        </div>
-      </a>
-
-      <!-- Crystal Hunters -->
-      <a
-        href="crystal-hunters.html"
-        class="game-entry fade-in group transition duration-300 hover:scale-105 hover:shadow-[0_0_30px_#38BDF8] rounded-xl"
-        title="Crystal Hunters Details"
-      >
-        <div class="game-visuals md:order-1">
-          <img
-            loading="lazy"
-            src="images/game2.png"
-            alt="Crystal Hunters Game"
-            class="w-full"
-            onerror="this.onerror=null;this.src='https://placehold.co/600x600/1f2937/f3f4f6?text=Crystal+Hunters';"
-          />
-        </div>
-        <div class="game-details text-center md:text-left md:order-2 px-6">
-          <div
-            class="social-proof text-sm font-bold px-4 py-2 rounded-lg inline-block mb-6"
-            style="background-color: rgba(14, 165, 233, 0.1); color: #38bdf8; border-color: rgba(14, 165, 233, 0.3);"
-          >
-            Coming Soon
-          </div>
-          <h3 class="text-4xl lg:text-5xl font-black mb-4 transition-colors duration-300 group-hover:text-sky-400">
-            Crystal Hunters
-          </h3>
-          <p class="text-lg leading-relaxed text-[#38BDF8]">
-            Uncover ancient secrets in forgotten lands. Collect legendary gear, battle formidable foes, and write your own epic.
-          </p>
-        </div>
-      </a>
-
-      <!-- Neon Racer -->
-      <a
-        href="neon-racer.html"
-        class="game-entry fade-in group transition duration-300 hover:scale-105 hover:shadow-[0_0_30px_#A855F7] rounded-xl"
-        title="Neon Racer Details"
-      >
-        <div class="game-visuals md:order-1">
-          <img
-            loading="lazy"
-            src="images/game1.png"
-            alt="Neon Racer Game"
-            class="w-full"
-            onerror="this.onerror=null;this.src='https://placehold.co/600x600/1f2937/f3f4f6?text=Neon+Racer';"
-          />
-        </div>
-        <div class="game-details text-center md:text-left md:order-2 px-6">
-          <div
-            class="social-proof text-sm font-bold px-4 py-2 rounded-lg inline-block mb-6"
-            style="background-color: rgba(168, 85, 247, 0.1); color: #a855f7; border-color: rgba(168, 85, 247, 0.3);"
-          >
-            Coming Soon
-          </div>
-          <h3 class="text-4xl lg:text-5xl font-black mb-4 transition-colors duration-300 group-hover:text-[#A855F7]">
-            Neon Racer
-          </h3>
-          <p class="text-lg leading-relaxed text-[#A855F7]">
-            In this race where 80s nostalgia meets cyberpunk aesthetics, test your reflexes and race to the top of the leaderboard!
-          </p>
-        </div>
-      </a>
-
-
-      <!-- Sky Frontier -->
-      <a
-        href="sky-frontier.html"
-        class="game-entry fade-in group transition duration-300 hover:scale-105 hover:shadow-[0_0_30px_#2563EB] rounded-xl"
-        title="Sky Frontier Game Details"
-      >
-        <div class="game-visuals md:order-1">
-          <img
-            loading="lazy"
-            src="images/sky-frontier.png"
-            alt="Sky Frontier Game"
-            class="w-full"
-            onerror="this.onerror=null;this.src='https://placehold.co/600x600/0F172A/E0F2FE?text=Sky+Frontier';"
-          />
-        </div>
-        <div class="game-details text-center md:text-left md:order-2 px-6">
-          <div
-            class="social-proof text-sm font-bold px-4 py-2 rounded-lg inline-block mb-6"
-            style="background-color: rgba(37, 99, 235, 0.1); color: #2563EB; border-color: rgba(37, 99, 235, 0.3);"
-          >
-            Coming Soon
-          </div>
-          <h3 class="text-4xl lg:text-5xl font-black mb-4 transition-colors duration-300 group-hover:text-blue-400">
-            Sky Frontier
-          </h3>
-          <p class="text-lg leading-relaxed text-blue-100">
-            Build your airship empire among the clouds. Explore floating islands, battle aerial foes, survive deadly storms, and forge your own skyfaring legacy — solo or with a crew.
-          </p>
-        </div>
-      </a>
-
-      
-
-
-
-    </div>
       </div>
     </section>
 
     <section class="py-20 lg:py-24 border-t border-gray-800 join-us-section">
       <div class="container mx-auto px-6 text-center">
-        <h2 class="text-4xl md:text-5xl font-black text-white mb-4 fade-in">
-          LET'S WRITE THE NEXT LEGEND TOGETHER.
-        </h2>
-        <p
-          class="text-lg text-gray-400 leading-relaxed max-w-2xl mx-auto mb-8 fade-in"
-          style="animation-delay: 200ms"
-        >
-          We are looking for talented people who share a passion for
-          development. Join us at Lorenta Labs to make a difference and reach
-          millions of players.
+        <h2 class="text-4xl md:text-5xl font-black text-white mb-4 fade-in">LET'S WRITE THE NEXT LEGEND TOGETHER.</h2>
+        <p class="text-lg text-gray-400 leading-relaxed max-w-2xl mx-auto mb-8 fade-in" style="animation-delay: 200ms">
+          We are looking for talented people who share a passion for development. Join us at Lorenta Labs to make a difference.
         </p>
-        <a
-          href="contact.html"
-          class="join-us-button inline-block text-lg font-bold py-4 px-10 rounded-full fade-in"
-          style="animation-delay: 400ms"
-        >
-          Career Opportunities
-        </a>
+        <a href="legal/contact/" class="join-us-button inline-block text-lg font-bold py-4 px-10 rounded-full fade-in" style="animation-delay: 400ms">Career Opportunities</a>
       </div>
     </section>
 
-
-
-
-
     <footer class="bg-black text-gray-400 border-t border-gray-800">
-  <div class="container mx-auto px-6 py-16">
-    <div
-      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 text-center md:text-left"
-    >
-
-    
-      <div class="flex flex-col items-center md:items-start">
-        <img
-          src="images/ali.png"
-          alt="Lorenta Labs Logo"
-          class="h-60 w-auto"
-          onerror="this.onerror=null;this.src='https://placehold.co/120x40/000000/ffffff?text=LORENTA';"
-        />
+      <div class="container mx-auto px-6 py-16">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 text-center md:text-left">
+          <div class="flex flex-col items-center md:items-start">
+            <img src="images/img/ali.png" alt="Lorenta Labs Logo" class="h-60 w-auto" onerror="this.onerror=null;this.src='https://placehold.co/120x40/000000/ffffff?text=LORENTA';">
+          </div>
+          <div class="w-full self-start flex justify-center items-start space-x-5">
+            <a href="https://instagram.com/lorentalabs" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/company/lorenta-labs" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn" title="LinkedIn">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM0 8h5v16H0zM7 8h4.8v2.2h.1c.7-1.2 2.4-2.5 4.9-2.5 5.2 0 6.1 3.4 6.1 7.8V24h-5V16c0-1.9 0-4.4-2.7-4.4-2.7 0-3.1 2.1-3.1 4.2V24H7z"/></svg>
+            </a>
+            <a href="https://youtube.com/@lorentalabs" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="YouTube">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2A29 29 0 0 0 23 11.75a29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+            </a>
+          </div>
+          <div>
+            <h4 class="font-bold text-white uppercase tracking-wider text-sm mb-4">Legal</h4>
+            <nav class="flex flex-col space-y-3">
+              <a href="legal/terms/" class="hover:text-sky-400 transition-colors">Terms</a>
+              <a href="legal/privacy/" class="hover:text-sky-400 transition-colors">Privacy</a>
+            </nav>
+          </div>
+          <div>
+            <h4 class="font-bold text-white uppercase tracking-wider text-sm mb-4">Get In Touch</h4>
+            <a href="legal/contact/" class="hover:text-sky-400 transition-colors">info@lorentalabs.com</a>
+          </div>
+        </div>
+        <div class="mt-0 pt-8 border-t border-gray-800 text-center text-sm">
+          <p>© 2026 Lorenta Labs</p>
+        </div>
       </div>
-
-   <!-- Social buttons aligned from the top, centered within their grid column, plus LinkedIn -->
-<div class="w-full self-start flex justify-center items-start space-x-5">
-  <a
-    href="https://instagram.com/lorentalabs"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="social-icon"
-    aria-label="Instagram"
-  >
-    <svg
-      class="w-6 h-6"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    >
-      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-    </svg>
-  </a>
-
-  <a
-    href="https://www.linkedin.com/company/lorenta-labs"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="social-icon"
-    aria-label="LinkedIn"
-    title="LinkedIn"
-  >
-    <!-- Minimal LinkedIn glyph -->
-    <svg class="w-6 h-6" viewBox="0 0 24 24" aria-hidden="true">
-      <path
-        fill="currentColor"
-        d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM0 8h5v16H0zM7 8h4.8v2.2h.1c.7-1.2 2.4-2.5 4.9-2.5 5.2 0 6.1 3.4 6.1 7.8V24h-5V16c0-1.9 0-4.4-2.7-4.4-2.7 0-3.1 2.1-3.1 4.2V24H7z"
-      />
-    </svg>
-  </a>
-
-  <a
-    href="https://youtube.com/@lorentalabs"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="social-icon"
-    aria-label="YouTube"
-  >
-    <svg
-      class="w-6 h-6"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    >
-      <path
-        d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2A29 29 0 0 0 23 11.75a29 29 0 0 0-.46-5.33z"
-      ></path>
-      <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
-    </svg>
-  </a>
-</div>
-
-
-      <div>
-        <h4
-          class="font-bold text-white uppercase tracking-wider text-sm mb-4"
-        >
-          Legal
-        </h4>
-        <nav class="flex flex-col space-y-3">
-          <a href="terms.html" class="hover:text-sky-400 transition-colors"
-            >Terms</a
-          >
-          <a
-            href="privacy.html"
-            class="hover:text-sky-400 transition-colors"
-            >Privacy</a
-          >
-        </nav>
-      </div>
-
-      <div>
-        <h4
-          class="font-bold text-white uppercase tracking-wider text-sm mb-4"
-        >
-          Get In Touch
-        </h4>
-        <a href="contact.html" class="hover:text-sky-400 transition-colors"
-          >info@lorentalabs.com</a
-        >
-
-        
-      </div>
-    </div>
-
-    <div class="mt-0 pt-8 border-t border-gray-800 text-center text-sm">
-      <p>© 2025 Lorenta Labs</p>
-    </div>
-  </div>
-</footer>
-
-
+    </footer>
 
     <script>
       document.addEventListener('DOMContentLoaded', () => {
@@ -629,26 +335,15 @@
             if (entry.isIntersecting) entry.target.classList.add('visible');
           });
         }, { threshold: 0.1 });
-
         els.forEach(el => io.observe(el));
       });
-    </script>
 
-    <script>
-      // Wait until the entire page (images, fonts, etc.) is fully loaded
       window.onload = function() {
         const splashScreen = document.getElementById('splash-screen');
-        
-        // Add a small delay for a smoother feel, then fade out
         setTimeout(() => {
           splashScreen.classList.add('hidden');
-        }, 500); // 500ms = 0.5 second delay
+        }, 500);
       };
     </script>
-
-
-
-
-    
   </body>
 </html>
