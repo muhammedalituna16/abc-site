@@ -27,19 +27,19 @@ const projectsData = {
             "../images/xpify_images/xpify-screen6.jpg"
         ]
     },
-    "cosmos": {
-        title: "Cosmos",
-        nameLogo: "../images/cosmos_images/cosmos-logo.png",
+    "ZenTurtle": {
+        title: "ZenTurtle",
+        nameLogo: "../images/ZenTurtle_images/ZenTurtle-logo.png",
         fontFamily: "'Lora', serif",
-        description: "Cosmos is your spiritual companion designed to interpret the unseen. Using advanced machine learning, it provides personalized coffee readings, tarot insights, and astrological forecasts instantly. Unlock the mysteries of your future and receive daily spiritual guidance tailored to your unique cosmic energy.",
+        description: "ZenTurtle is your spiritual companion designed to interpret the unseen. Using advanced machine learning, it provides personalized coffee readings, tarot insights, and astrological forecasts instantly. Unlock the mysteries of your future and receive daily spiritual guidance tailored to your unique cosmic energy.",
         themeColor: "#ab6eb7",
         bgColor: "#050510",
         secondaryBg: "#0f0f25",
         textColor: "#E0E0E0",
         heroGradient: "rgba(183, 110, 121, 0.4)",
-        logo: "../images/cosmos_images/cosmos.png",
+        logo: "../images/ZenTurtle_images/ZenTurtle.png",
         playStore: "https://play.google.com/store/apps/details?id=com.lorentalabs.falai",
-        appStore: "https://apps.apple.com/us/app/cosmos-astrology-tarot/id6758571788",
+        appStore: "https://apps.apple.com/us/app/ZenTurtle-astrology-tarot/id6758571788",
         features: [
             { title: "AI Coffee Reading", desc: "Snap a photo and let AI analyze the symbols in your cup." },
             { title: "Tarot Insights", desc: "Deep interpretations of tarot cards powered by modern algorithms." },
@@ -47,11 +47,11 @@ const projectsData = {
             { title: "Spiritual Guidance", desc: "Talk to your AI mystic for 24/7 clarity and advice." }
         ],
         screenshots: [
-            "../images/cosmos_images/cosmos-screen1.png",
-            "../images/cosmos_images/cosmos-screen2.png",
-            "../images/cosmos_images/cosmos-screen3.png",
-            "../images/cosmos_images/cosmos-screen4.png",
-            "../images/cosmos_images/cosmos-screen5.png"
+            "../images/ZenTurtle_images/ZenTurtle-screen1.png",
+            "../images/ZenTurtle_images/ZenTurtle-screen2.png",
+            "../images/ZenTurtle_images/ZenTurtle-screen3.png",
+            "../images/ZenTurtle_images/ZenTurtle-screen4.png",
+            "../images/ZenTurtle_images/ZenTurtle-screen5.png"
         ]
     },
     "light-bloom": {
